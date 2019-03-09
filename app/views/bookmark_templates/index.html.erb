@@ -70,19 +70,31 @@
 
         <!-- Display bookmark.dish_id start -->
         <td>
-          <%= bookmark.dish.name %>
+          <% if bookmark.dish.present? %>
+            <a href="/dishes/<%= bookmark.dish.id %>">
+              <%= bookmark.dish.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bookmark.dish_id end -->
 
         <!-- Display bookmark.venue_id start -->
         <td>
-          <%= bookmark.venue.name %>
+          <% if bookmark.venue.present? %>
+            <a href="/venues/<%= bookmark.venue.id %>">
+              <%= bookmark.venue.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bookmark.venue_id end -->
 
         <!-- Display bookmark.user_id start -->
         <td>
-          <%= bookmark.user.username %>
+          <% if bookmark.user.present? %>
+            <a href="/users/<%= bookmark.user.id %>">
+              <%= bookmark.user.username %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bookmark.user_id end -->
 
