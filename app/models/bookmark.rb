@@ -5,4 +5,6 @@ class Bookmark < ApplicationRecord
 
   # Validations
 
+  validates :venue_id, :presence => true
+
 end
